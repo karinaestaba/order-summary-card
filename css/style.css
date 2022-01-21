@@ -18,7 +18,8 @@
 *::before,
 *::after{
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html, body{
@@ -41,12 +42,16 @@ body, button{
 
 a{
   color: var(--bright-blue);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 
   a:hover{
     text-decoration: none;
     color: var(--hot-blue);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
   }
 
@@ -55,9 +60,17 @@ a{
   margin: 0 auto;
   height: 100%;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   padding: 2rem;
 }
@@ -94,17 +107,29 @@ a{
     }
 
   .card-footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 1rem;
     padding: 0 2.5rem 2rem;
   }
 
 .checkout-resume{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
   text-align: center;
 
@@ -133,10 +158,14 @@ a{
   font-weight: 900;
 
   cursor: pointer;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 
   .btn:hover{
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
   }
 
@@ -171,9 +200,11 @@ a{
   }
 
   .checkout-resume{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "a b c";
+        grid-template-areas: "a b c";
     text-align: left;
   }
 }
