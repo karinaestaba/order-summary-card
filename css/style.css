@@ -61,9 +61,7 @@ a{
   height: 100%;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -171,6 +169,7 @@ a{
 
   .btn-confirm{
     background-color: var(--bright-blue);
+    box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7);
     color: white;
   }
 
