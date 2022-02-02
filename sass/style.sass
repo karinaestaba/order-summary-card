@@ -1,0 +1,150 @@
+\:root
+  --pale-blue: hsl(225, 100%, 94%, 0.38)
+  --bright-blue: hsl(245, 75%, 52%)
+  --very-pale: hsl(225, 100%, 98%)
+  --desatured-blue: hsl(224, 23%, 55%)
+  --dark-blue: hsl(223, 47%, 23%)
+  --hot-blue: hsl(245, 83%, 68%)
+  --font-size: 16px
+  --line-height: 25px
+  --font-family: 'Red Hat Display', sans-serif
+  --border-radius: 1.3rem
+  --border-radius-sm: .6rem
+
+*,
+*::before,
+*::after
+  margin: 0
+  box-sizing: border-box
+
+html,
+body
+  min-height: 100vh
+  height: 100%
+
+body
+  background-color: #e0e8ff
+  background-image: url('../images/pattern-background-mobile.svg')
+  background-repeat: no-repeat
+  background-size: contain
+
+body,
+button
+  font-family: var(--font-family)
+  line-height: var(--line-height)
+  font-weight: 500
+  color: var(--desatured-blue)
+
+a
+  color: var(--bright-blue)
+  transition: all 1s
+
+  &:hover
+    text-decoration: none
+    color: var(--hot-blue)
+    transition: all 1s
+
+.main-container
+  max-width: 1440px
+  margin: 0 auto
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 2rem
+
+.card
+  max-width: 400px
+  border-radius: var(--border-radius)
+  background-color: var(--very-pale)
+  -webkit-box-shadow: 1px 1px 15px 5px #C6CFF6 
+  box-shadow: 0px 9px 32px -6px #A0A8CA
+
+  &-img 
+    > img
+      width: 100%
+      border-top-left-radius: var(--border-radius)
+      border-top-right-radius: var(--border-radius)
+      
+  &-content
+    padding: 2.5rem 2.5rem 1.5rem
+
+  &-title
+    text-align: center
+    color: var(--dark-blue)
+    font-size: 1.5rem
+    font-weight: 900
+
+  &-description
+    text-align: center
+    padding: 1rem 0
+
+  &-footer
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    padding: 0 2.5rem 2rem
+
+.checkout-resume
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  align-items: center
+  padding: 1rem
+  text-align: center
+  border-radius: var(--border-radius-sm)
+  background-color: var(--pale-blue)
+
+  &-resume 
+    > .icon
+      margin: 0 auto
+
+    &-description
+      font-weight: 900
+      color: var(--dark-blue)
+
+    &-action
+      font-size: .8rem
+      font-weight: 700
+
+.btn
+  padding: .8rem
+  border-radius: var(--border-radius-sm)
+  border: 0
+  font-weight: 900
+  cursor: pointer
+  transition: all 1s
+
+  &:hover
+    transition: all 1s
+  
+  &-confirm
+    background-color: var(--bright-blue)
+    box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7)
+    color: white
+  
+    &:hover
+      background-color: var(--hot-blue)
+      -webkit-box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7) 
+      box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7)
+
+  &-cancel
+    color: var(--desatured-blue)
+    background-color: transparent
+
+    &:hover
+      color: var(--dark-blue)
+
+.icon
+  border-radius: 50%
+
+@media screen and (min-width: 375px)
+  .checkout-resume
+    display: grid
+    grid-template-columns: 1fr 3fr 1fr
+    grid-template-areas: "a b c"
+    text-align: left
+
+@media screen and (min-width: 998px)
+  body
+    background-image: url('../images/pattern-background-desktop.svg')
