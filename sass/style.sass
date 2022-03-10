@@ -27,6 +27,11 @@ body
   background-repeat: no-repeat
   background-size: contain
 
+  display: grid
+  grid-template-rows: auto 1fr
+  grid-template-areas: "c-main" "c-footer"
+  justify-content: center
+
 body,
 button
   font-family: var(--font-family)
@@ -50,7 +55,8 @@ a
   display: flex
   justify-content: center
   align-items: center
-  padding: 6.5rem 2rem
+  padding: 2rem 2rem 2rem
+  grid-area: c-main
 
 .card
   max-width: 450px
@@ -152,6 +158,25 @@ a
 .icon
   border-radius: 50%
 
+.main-footer
+  grid-area: foot
+  min-height: 65px
+  color: var(--dark-blue-line)
+  text-align: center
+  font-size: 12px
+  line-height: 1.1
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  grid-area: c-footer
+
+  a
+    display: inline-block
+    margin-left: 2px
+    color: var(--hot-blue)
+    text-decoration: none
+
 @media screen and (min-width: 375px)
   .checkout-resume
     display: grid
@@ -162,3 +187,6 @@ a
 @media screen and (min-width: 998px)
   body
     background-image: url('../images/pattern-background-desktop.svg')
+
+  .main-container
+    padding: 6.5rem 2rem 4rem
