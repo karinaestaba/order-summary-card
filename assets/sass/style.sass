@@ -22,7 +22,7 @@ body
 
 body
   background-color: #e0e8ff
-  background-image: url('../img/pattern-background-mobile.svg')
+  background-image: url('../images/pattern-background-mobile.svg')
   background-repeat: no-repeat
   background-size: contain
 
@@ -175,6 +175,9 @@ a
     color: $hot-blue
     text-decoration: none
 
+    &:hover
+      color: darken($hot-blue, 10)
+
 @media screen and (min-width: 375px)
   .checkout-resume
     display: grid
@@ -184,7 +187,7 @@ a
 
 @media screen and (min-width: 998px)
   body
-    background-image: url('../img/pattern-background-desktop.svg')
+    background-image: url('../images/pattern-background-desktop.svg')
 
   .main-container
     padding: 6.5rem 2rem 4rem
