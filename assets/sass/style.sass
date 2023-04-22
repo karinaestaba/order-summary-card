@@ -1,14 +1,13 @@
-\:root
-  --pale-blue: hsl(225, 100%, 94%, 0.38)
-  --bright-blue: hsl(245, 75%, 52%)
-  --very-pale: hsl(225, 100%, 98%)
-  --desatured-blue: hsl(224, 23%, 55%)
-  --dark-blue: hsl(223, 47%, 23%)
-  --hot-blue: hsl(245, 83%, 68%)
-  --font-size: 16px
-  --font-family: 'Red Hat Display', sans-serif
-  --border-radius: 1.3rem
-  --border-radius-sm: .6rem
+$pale-blue: hsl(225, 100%, 94%, 0.38)
+$bright-blue: hsl(245, 75%, 52%)
+$very-pale: hsl(225, 100%, 98%)
+$desatured-blue: hsl(224, 23%, 55%)
+$dark-blue: hsl(223, 47%, 23%)
+$hot-blue: hsl(245, 83%, 68%)
+$font-size: 16px
+$font-family: 'Red Hat Display', sans-serif
+$border-radius: 1.3rem
+$border-radius-sm: .6rem
 
 *,
 *::before,
@@ -23,7 +22,7 @@ body
 
 body
   background-color: #e0e8ff
-  background-image: url('../images/pattern-background-mobile.svg')
+  background-image: url('../img/pattern-background-mobile.svg')
   background-repeat: no-repeat
   background-size: contain
 
@@ -34,18 +33,17 @@ body
 
 body,
 button
-  font-family: var(--font-family)
-  line-height: var(--line-height)
+  font-family: $font-family
   font-weight: 500
-  color: var(--desatured-blue)
+  color: $desatured-blue
 
 a
-  color: var(--bright-blue)
+  color: $bright-blue
   transition: all 1s
 
   &:hover
     text-decoration: none
-    color: var(--hot-blue)
+    color: $hot-blue
     transition: all 1s
 
 .main-container
@@ -60,7 +58,7 @@ a
 
 .card
   max-width: 450px
-  border-radius: var(--border-radius)
+  border-radius: $border-radius
   background-color: white
   -webkit-box-shadow: 1px 1px 15px 5px #C6CFF6 
   box-shadow: 0px 9px 32px -6px #A0A8CA
@@ -68,15 +66,15 @@ a
   &-img 
     > img
       width: 100%
-      border-top-left-radius: var(--border-radius)
-      border-top-right-radius: var(--border-radius)
+      border-top-left-radius: $border-radius
+      border-top-right-radius: $border-radius
       
   &-content
     padding: 1.8rem 3rem
 
   &-title
     text-align: center
-    color: var(--dark-blue)
+    color: $dark-blue
     font-size: 1.78rem
     font-weight: 900
     padding-top: .66rem
@@ -100,8 +98,8 @@ a
     align-items: center
     padding: 1.2rem 1.5rem
     text-align: center
-    border-radius: var(--border-radius-sm)
-    background-color: var(--pale-blue)
+    border-radius: $border-radius-sm
+    background-color: $pale-blue
 
     &-resume 
       > .icon
@@ -112,7 +110,7 @@ a
 
   &-description
     font-weight: 900
-    color: var(--dark-blue)
+    color: $dark-blue
     line-height: 1
 
   &-action
@@ -126,7 +124,7 @@ a
 
 .btn
   padding: 1.1rem
-  border-radius: var(--border-radius-sm)
+  border-radius: $border-radius-sm
   border: 0
   font-weight: 900
   cursor: pointer
@@ -139,21 +137,21 @@ a
     transition: all 1s
   
   &-confirm
-    background-color: var(--bright-blue)
+    background-color: $bright-blue
     box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7)
     color: white
   
     &:hover
-      background-color: var(--hot-blue)
+      background-color: $hot-blue
       -webkit-box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7) 
       box-shadow: 0px 9px 32px -6px rgba(118,108,241,0.7)
 
   &-cancel
-    color: var(--desatured-blue)
+    color: $desatured-blue
     background-color: transparent
 
     &:hover
-      color: var(--dark-blue)
+      color: $dark-blue
 
 .icon
   border-radius: 50%
@@ -161,7 +159,7 @@ a
 .main-footer
   grid-area: foot
   min-height: 65px
-  color: var(--dark-blue-line)
+  // color: $dark-blue-line
   text-align: center
   font-size: 12px
   line-height: 1.1
@@ -174,7 +172,7 @@ a
   a
     display: inline-block
     margin-left: 2px
-    color: var(--hot-blue)
+    color: $hot-blue
     text-decoration: none
 
 @media screen and (min-width: 375px)
@@ -186,7 +184,7 @@ a
 
 @media screen and (min-width: 998px)
   body
-    background-image: url('../images/pattern-background-desktop.svg')
+    background-image: url('../img/pattern-background-desktop.svg')
 
   .main-container
     padding: 6.5rem 2rem 4rem
